@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Translator & Learning Tool | Morse Code Guide</title>
+    <meta name="description" content="Learn Morse code and translate text to Morse code or decode Morse code into text with this free interactive learning and practice tool.">
+    <link rel="canonical" href="https://yourusername.github.io/morse-code-learning/">
+    <meta property="og:title" content="Morse Code Translator & Learning Tool | Morse Code Guide">
+    <meta property="og:description" content="Learn Morse code and translate text to Morse code or decode Morse code into text with this free interactive learning and practice tool.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Morse Code Translator & Learning Tool | Morse Code Guide">
+    <meta name="twitter:description" content="Learn Morse code and translate text to Morse code or decode Morse code into text with this free interactive learning and practice tool.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="20" r="3" fill="currentColor"/>
+                        <circle cx="28" cy="20" r="3" fill="currentColor"/>
+                        <line x1="18" y1="20" x2="22" y2="20" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Morse Code Guide</span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#translator" class="nav-link">Translator</a></li>
+                        <li><a href="#alphabet" class="nav-link">Alphabet</a></li>
+                        <li><a href="#learn" class="nav-link">Learn Morse Code</a></li>
+                        <li><a href="#practice" class="nav-link">Practice</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Morse Code Translator & Learning Tool</h1>
+                    <p>Translate text into Morse code, decode Morse code into readable text, learn the Morse alphabet, and practice your skills with interactive exercises.</p>
+                    <div class="hero-buttons">
+                        <a href="#translator" class="btn btn-primary">Start Translating</a>
+                        <a href="#learn" class="btn btn-secondary">Learn Morse Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="translator" class="translator-section">
+            <div class="container">
+                <h2>Morse Code Translator</h2>
+                <div class="translator-card">
+                    <div class="translator-mode">
+                        <button class="mode-btn active" data-mode="text-to-morse">Text → Morse Code</button>
+                        <button class="mode-btn" data-mode="morse-to-text">Morse Code → Text</button>
+                    </div>
+                    <div class="translator-inputs">
+                        <div class="input-group">
+                            <label for="translator-input" id="input-label">Enter Text</label>
+                            <textarea id="translator-input" placeholder="Enter text to translate..."></textarea>
+                        </div>
+                        <div class="translator-actions">
+                            <button id="translate-btn" class="btn btn-primary">Translate</button>
+                            <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                            <button id="example-btn" class="btn btn-secondary">Example</button>
+                        </div>
+                        <div class="input-group">
+                            <label for="translator-output" id="output-label">Morse Code Output</label>
+                            <textarea id="translator-output" readonly placeholder="Translation will appear here..."></textarea>
+                        </div>
+                        <div class="translator-actions">
+                            <button id="copy-btn" class="btn btn-secondary">Copy Output</button>
+                            <button id="swap-btn" class="btn btn-secondary">Swap Mode</button>
+                        </div>
+                    </div>
+                    <div id="status-message" class="status-message" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="alphabet" class="alphabet-section">
+            <div class="container">
+                <h2>Morse Code Alphabet</h2>
+                <div class="alphabet-table">
+                    <div class="alphabet-card" data-letter="A">
+                        <span class="letter">A</span>
+                        <span class="morse">.-</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="B">
+                        <span class="letter">B</span>
+                        <span class="morse">-...</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="C">
+                        <span class="letter">C</span>
+                        <span class="morse">-.-.</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="D">
+                        <span class="letter">D</span>
+                        <span class="morse">-..</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="E">
+                        <span class="letter">E</span>
+                        <span class="morse">.</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="F">
+                        <span class="letter">F</span>
+                        <span class="morse">..-.</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="G">
+                        <span class="letter">G</span>
+                        <span class="morse">--.</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="H">
+                        <span class="letter">H</span>
+                        <span class="morse">....</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="I">
+                        <span class="letter">I</span>
+                        <span class="morse">..</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="J">
+                        <span class="letter">J</span>
+                        <span class="morse">.---</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="K">
+                        <span class="letter">K</span>
+                        <span class="morse">-.-</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="L">
+                        <span class="letter">L</span>
+                        <span class="morse">.-..</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="M">
+                        <span class="letter">M</span>
+                        <span class="morse">--</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="N">
+                        <span class="letter">N</span>
+                        <span class="morse">-.</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="O">
+                        <span class="letter">O</span>
+                        <span class="morse">---</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="P">
+                        <span class="letter">P</span>
+                        <span class="morse">.--.</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="Q">
+                        <span class="letter">Q</span>
+                        <span class="morse">--.-</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="R">
+                        <span class="letter">R</span>
+                        <span class="morse">.-.</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="S">
+                        <span class="letter">S</span>
+                        <span class="morse">...</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="T">
+                        <span class="letter">T</span>
+                        <span class="morse">-</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="U">
+                        <span class="letter">U</span>
+                        <span class="morse">..-</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="V">
+                        <span class="letter">V</span>
+                        <span class="morse">...-</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="W">
+                        <span class="letter">W</span>
+                        <span class="morse">.--</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="X">
+                        <span class="letter">X</span>
+                        <span class="morse">-..-</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="Y">
+                        <span class="letter">Y</span>
+                        <span class="morse">-.--</span>
+                    </div>
+                    <div class="alphabet-card" data-letter="Z">
+                        <span class="letter">Z</span>
+                        <span class="morse">--..</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="numbers" class="numbers-section">
+            <div class="container">
+                <h2>Morse Code Numbers</h2>
+                <div class="numbers-table">
+                    <div class="number-card" data-number="0">
+                        <span class="number">0</span>
+                        <span class="morse">-----</span>
+                    </div>
+                    <div class="number-card" data-number="1">
+                        <span class="number">1</span>
+                        <span class="morse">.----</span>
+                    </div>
+                    <div class="number-card" data-number="2">
+                        <span class="number">2</span>
+                        <span class="morse">..---</span>
+                    </div>
+                    <div class="number-card" data-number="3">
+                        <span class="number">3</span>
+                        <span class="morse">...--</span>
+                    </div>
+                    <div class="number-card" data-number="4">
+                        <span class="number">4</span>
+                        <span class="morse">....-</span>
+                    </div>
+                    <div class="number-card" data-number="5">
+                        <span class="number">5</span>
+                        <span class="morse">.....</span>
+                    </div>
+                    <div class="number-card" data-number="6">
+                        <span class="number">6</span>
+                        <span class="morse">-....</span>
+                    </div>
+                    <div class="number-card" data-number="7">
+                        <span class="number">7</span>
+                        <span class="morse">--...</span>
+                    </div>
+                    <div class="number-card" data-number="8">
+                        <span class="number">8</span>
+                        <span class="morse">---..</span>
+                    </div>
+                    <div class="number-card" data-number="9">
+                        <span class="number">9</span>
+                        <span class="morse">----.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="punctuation" class="punctuation-section">
+            <div class="container">
+                <h2>Morse Code Punctuation</h2>
+                <div class="punctuation-table">
+                    <div class="punctuation-card">
+                        <span class="symbol">.</span>
+                        <span class="morse">.-.-.-</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">,</span>
+                        <span class="morse">--..--</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">?</span>
+                        <span class="morse">..--..</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">'</span>
+                        <span class="morse">.----.</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">!</span>
+                        <span class="morse">-.-.--</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">/</span>
+                        <span class="morse">-..-.</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">(</span>
+                        <span class="morse">-.--.</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">)</span>
+                        <span class="morse">-.--.-</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">&amp;</span>
+                        <span class="morse">.-...</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">:</span>
+                        <span class="morse">---...</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">;</span>
+                        <span class="morse">-.-.-.</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">=</span>
+                        <span class="morse">-...-</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">+</span>
+                        <span class="morse">.-.-.</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">_</span>
+                        <span class="morse">..--.-</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">"</span>
+                        <span class="morse">.-..-.</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">$</span>
+                        <span class="morse">...-..-</span>
+                    </div>
+                    <div class="punctuation-card">
+                        <span class="symbol">@</span>
+                        <span class="morse">.--.-.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="learn" class="learn-section">
+            <div class="container">
+                <h2>Learn Morse Code</h2>
+                
+                <div class="learn-content">
+                    <h3>What Is Morse Code?</h3>
+                    <p>Morse code is a method used in telecommunication to encode text characters as standardized sequences of two different signal durations, called dots and dashes, or dits and dahs. It was developed in the 1830s and 1840s by Samuel Morse and Alfred Vail for use with their electrical telegraph. While no longer widely used for commercial communication, Morse code remains popular among amateur radio operators and is still recognized internationally as a distress signal.</p>
+                    
+                    <h3>How Does Morse Code Work?</h3>
+                    <p>Morse code represents each letter of the alphabet and each number with a unique combination of dots (short signals) and dashes (long signals). The key principles are:</p>
+                    <ul>
+                        <li><strong>Dots (.)</strong> - Short signals, typically the basic unit of time</li>
+                        <li><strong>Dashes (-)</strong> - Long signals, typically three times the length of a dot</li>
+                        <li><strong>Letter separation</strong> - The space between letters within a word is typically the length of one dash</li>
+                        <li><strong>Word separation</strong> - The space between words is typically seven units of time, often represented as a forward slash (/) in written Morse code</li>
+                    </ul>
+                    
+                    <h3>Dot and Dash</h3>
+                    <p>The fundamental building blocks of Morse code are the dot and the dash. A dot is the shortest possible signal, while a dash is a signal that lasts three times as long as a dot. The timing is crucial for both sending and receiving Morse code. When writing Morse code, dots are written as periods (.) and dashes as hyphens (-). When spoken, dots are often called "dits" and dashes are called "dahs."</p>
+                    
+                    <h3>How to Read Morse Code</h3>
+                    <p>Reading Morse code requires practice and familiarity with the patterns. Beginners should start by learning the most common letters first (E, T, A, O, I, N, S, H, R, D, L, U). As you practice, you'll begin to recognize the rhythm and patterns of different letters. Many learners find it helpful to practice with audio recordings or Morse code apps that play the sounds at different speeds. Start slow and gradually increase your speed as you become more comfortable.</p>
+                    
+                    <h3>How to Memorize Morse Code</h3>
+                    <p>Several techniques can help you memorize Morse code more effectively:</p>
+                    <ul>
+                        <li><strong>Learn common letters first</strong> - Start with E, T, A, O, I, N, S, H, R, D, L, U as they appear most frequently in English</li>
+                        <li><strong>Use mnemonic devices</strong> - Create mental associations, such as "Q" looks like two eyes and a tail (--.-)</li>
+                        <li><strong>Practice daily</strong> - Short, regular practice sessions are more effective than occasional long sessions</li>
+                        <li><strong>Write it out</strong> - Practice writing words in Morse code by hand to build muscle memory</li>
+                        <li><strong>Use flashcards</strong> - Test yourself regularly with letter-to-code and code-to-letter flashcards</li>
+                        <li><strong>Listen to audio</strong> - Train your ear to recognize the rhythm of different letters</li>
+                    </ul>
+                    
+                    <h3>Where Is Morse Code Used?</h3>
+                    <p>While Morse code is no longer used for most commercial telecommunication, it still has several legitimate applications:</p>
+                    <ul>
+                        <li><strong>Amateur radio</strong> - Many ham radio operators still use Morse code for communication, especially in contests and emergencies</li>
+                        <li><strong>Emergency communication</strong> - Morse code is recognized internationally as a distress signal (SOS: ... --- ...)</li>
+                        <li><strong>Aviation and maritime</strong> - Navigational aids sometimes use Morse code identifiers</li>
+                        <li><strong>Signaling</strong> - Some emergency signaling methods, such as tapping or light signals, use Morse code patterns</li>
+                        <li><strong>Education</strong> - Morse code is often taught as part of telecommunications history and as a mental exercise</li>
+                        <li><strong>Assistive technology</strong> - Some communication devices for people with disabilities use Morse code input</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="practice" class="practice-section">
+            <div class="container">
+                <h2>Practice Morse Code</h2>
+                <div class="practice-card">
+                    <div class="practice-mode">
+                        <button class="practice-mode-btn active" data-practice-mode="decode">Decode</button>
+                        <button class="practice-mode-btn" data-practice-mode="encode">Encode</button>
+                    </div>
+                    <div class="practice-content">
+                        <div class="practice-question">
+                            <p id="question-text">What letter does this represent?</p>
+                            <div id="morse-display" class="morse-display">...</div>
+                        </div>
+                        <div id="answer-options" class="answer-options">
+                            <button class="answer-btn" data-answer="E">E</button>
+                            <button class="answer-btn" data-answer="T">T</button>
+                            <button class="answer-btn" data-answer="A">A</button>
+                            <button class="answer-btn" data-answer="I">I</button>
+                        </div>
+                        <div id="feedback" class="feedback"></div>
+                        <div class="practice-controls">
+                            <button id="next-question-btn" class="btn btn-primary">Next Question</button>
+                            <button id="reset-score-btn" class="btn btn-secondary">Reset Score</button>
+                        </div>
+                        <div class="score-display">
+                            <span>Score: <strong id="score">0</strong></span>
+                            <span>Questions: <strong id="questions-count">0</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="resources-section">
+            <div class="container">
+                <h2>More Morse Code Resources</h2>
+                <div class="resources-content">
+                    <p>Learning Morse code is a rewarding skill that combines history, pattern recognition, and communication. While this tool provides a solid foundation for translating and practicing, there are many other resources available to help you on your Morse code journey.</p>
+                    <p>For those interested in the practical applications of Morse code, consider exploring amateur radio communities where Morse code is still actively used. Many local ham radio clubs offer classes and practice sessions. Online forums and communities can provide guidance and connect you with fellow enthusiasts.</p>
+                    <p>If you want another simple online tool for converting and decoding Morse code, you can also try this <a href="https://morsecodetranslatr.io/" target="_blank" rel="noopener noreferrer">morse code translator</a>.</p>
+                    <p>For mobile learning, there are several apps available that provide interactive lessons, audio practice, and spaced repetition to help you master Morse code at your own pace. Combining different learning methods—visual reference, audio practice, and interactive exercises—can accelerate your progress and make learning more engaging.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Morse Code Learning & Reference Tool</h3>
+                    <p>A simple educational resource for learning, translating, decoding, and practicing Morse code.</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#translator">Translator</a></li>
+                        <li><a href="#alphabet">Alphabet</a></li>
+                        <li><a href="#learn">Learn</a></li>
+                        <li><a href="#practice">Practice</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Morse Code Learning & Reference Tool</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Morse Code Learning & Reference Tool",
+        "url": "https://yourusername.github.io/morse-code-learning/",
+        "description": "Learn Morse code and translate text to Morse code or decode Morse code into text with this free interactive learning and practice tool."
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Morse Code Learning & Reference Tool",
+        "url": "https://yourusername.github.io/morse-code-learning/",
+        "description": "Learn Morse code and translate text to Morse code or decode Morse code into text with this free interactive learning and practice tool.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
